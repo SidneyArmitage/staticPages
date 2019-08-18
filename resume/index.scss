@@ -10,10 +10,6 @@ $primary-color-4: #02726A;
     margin-top: 2em;
   }
 
-  @page:first {
-    margin-top: 0;
-  }
-
   * {
     color-adjust: exact;
     -webkit-print-color-adjust: exact;
@@ -139,9 +135,14 @@ a {
   }
 }
 
+.break {
+  page-break-after: always;
+  display: block;
+}
+
 section {
-  page-break-before: auto;
-  page-break-inside: avoid;
+  break-before: auto;
+  break-inside: avoid;
 }
 
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";

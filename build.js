@@ -7,10 +7,13 @@ const Path = require("path");
   page.on('requestfailed', msg => {
     console.log(msg);
   });
-  await page.goto("http://localhost:1234/index.html", {waitUntil: 'networkidle2'});
-  await page.screenshot({path: 'example.png'});
+  await page.goto("http://localhost:3000/coverletter/index.html", {waitUntil: 'networkidle2'});
   await page.pdf({
-    path: Path.join("./", `${process.argv[2]}.pdf`),
+    path: Path.join("./", `coverLetter.pdf`),
+  });
+  await page.goto("http://localhost:3000/resume/index.html", {waitUntil: 'networkidle2'});
+  await page.pdf({
+    path: Path.join("./", `resume.pdf`),
   });
   console.log("finished");
   process.exit();

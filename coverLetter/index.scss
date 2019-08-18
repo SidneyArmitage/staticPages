@@ -137,11 +137,18 @@ a {
   h1 {
     margin-bottom: 0;
   }
+  
+  .contacts {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
 }
 
 section {
-  page-break-before: auto;
-  page-break-inside: avoid;
+  break-before: auto;
+  break-inside: avoid;
 }
 
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
