@@ -16,7 +16,7 @@
     "@types/puppeteer": "^1.11.1",
     "koa": "^2.7.0",
     "koa-static": "^5.0.0",
-    "parcel": "*",
+    "parcel": "^1.12.4",
     "puppeteer": "^1.19.0",
     "tsc": "^1.20150623.0"
   },

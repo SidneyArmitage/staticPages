@@ -62,30 +62,12 @@ body {
     color: $primary-color-4;
   }
 
-  ul.rating {
+  ul.skills {
     list-style: none;
     padding-left: 0;
 
     li {
       position: relative;
-
-      span.values {
-        position: absolute;
-        right: 0;
-        
-        i {
-          font-size: 1em;
-
-          &.false {
-            color: $primary-color-2;
-          }
-
-          &.true {
-            color: $primary-color-4;
-          }
-
-        }
-      }
     }
 
   }
