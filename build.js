@@ -7,7 +7,7 @@ const Path = require("path");
   page.on('requestfailed', msg => {
     console.log(msg);
   });
-  await page.goto("http://localhost:1234/index.html", {waitUntil: 'networkidle2'});
+  await page.goto("http://localhost:3000/index.html", {waitUntil: 'networkidle2'});
   await page.screenshot({path: 'example.png'});
   await page.pdf({
     path: Path.join("./", `${process.argv[2]}.pdf`),
