@@ -17,7 +17,7 @@
     "@types/node": "^10.12.18",
     "@types/puppeteer": "^1.11.1",
     "parcel": "*",
-    "puppeteer": "^1.11.0",
+    "puppeteer": "^1.13.0",
     "tsc": "^1.20150623.0"
   },
   "devDependencies": {
