@@ -1,0 +1,159 @@
+$primary-color-0: #25A097;
+$primary-color-1: #70CFC8;
+$primary-color-2: #43B5AD;
+$primary-color-3: #05978D;
+$primary-color-4: #02726A;
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin-top: 2em;
+  }
+
+  @page:first {
+    margin-top: 0;
+  }
+
+  * {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+}
+
+html {
+  height: calc(100% - 2em);
+}
+
+body {
+  display: grid;
+  grid-template-columns: 60mm 145mm;
+  grid-template-rows: 30mm 100%;
+  grid-template-areas: 
+    "overview header"
+    "overview content";
+    height: calc(100% - 6em);
+}
+
+.overview {
+  background-color: $primary-color-1;
+  color: $primary-color-4;
+  grid-area: overview;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 2em;
+
+  section {
+
+    p, ul {
+      font-size: 1em;
+    }
+
+    h1 {
+      margin-bottom: 0.1em;
+      margin-top: 0.25em;
+      border-bottom: solid 1px $primary-color-4;
+      font-size: 1.2em;
+    }
+
+    p {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    i {
+      font-size: 1.5em;
+    }
+
+  }
+
+  a {
+    color: $primary-color-4;
+  }
+
+  ul.rating {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      position: relative;
+
+      span.values {
+        position: absolute;
+        right: 0;
+        
+        i {
+          font-size: 1em;
+
+          &.false {
+            color: $primary-color-2;
+          }
+
+          &.true {
+            color: $primary-color-4;
+          }
+
+        }
+      }
+    }
+
+  }
+
+}
+
+.content {
+  background-color: white;
+  grid-area: content;
+  padding-left: 1em;
+
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: 6em auto;
+
+  .times {
+  }
+}
+
+.details {
+
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  a{
+    color: black;
+  }
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: $primary-color-4;
+  color: white !important;
+  grid-area: header;
+  padding-left: 1em;
+
+  h1 {
+    margin-bottom: 0;
+  }
+  
+  .contacts {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+}
+
+section {
+  break-before: auto;
+  break-inside: avoid;
+}
+
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";

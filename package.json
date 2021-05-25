@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "resume-build": "node build resume",
+    "cover-build": "node build coverLetter",
     "resume": "parcel ./resume/index.html",
+    "cover": "parcel ./coverLetter/index.html",
     "server": "node server"
   },
   "author": "",
