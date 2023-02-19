@@ -8,7 +8,6 @@ const Path = require("path");
     console.log(msg);
   });
   await page.goto("http://localhost:3000/index.html", {waitUntil: 'networkidle2'});
-  await page.screenshot({path: 'example.png'});
   await page.pdf({
     path: Path.join("./", `${process.argv[2]}.pdf`),
   });
