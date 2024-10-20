@@ -8,6 +8,7 @@ $primary-color-4: #02726A;
   @page {
     size: A4 portrait;
     margin-top: 2em; 
+    margin-bottom: 2em;
   }
 
   @page:first {
@@ -157,6 +158,10 @@ a {
   h1 {
     margin-bottom: 0;
   }
+}
+
+.sub-list {
+  margin-top: 0.5em;
 }
 
 .unit {
