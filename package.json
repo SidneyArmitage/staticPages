@@ -16,12 +16,12 @@
   "dependencies": {
     "koa": "^2.14.1",
     "koa-static": "^5.0.0",
-    "parcel": "*",
+    "parcel": "2.12.0",
     "puppeteer": "^1.11.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
-    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-sass": "^2.12.0",
     "cssnano": "^4.1.8",
     "sass": "^1.15.2"
   }

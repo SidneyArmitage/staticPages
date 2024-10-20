@@ -7,7 +7,7 @@ $primary-color-4: #02726A;
 @media print {
   @page {
     size: A4 portrait;
-    margin-top: 2em;
+    margin-top: 2em; 
   }
 
   @page:first {
@@ -21,19 +21,13 @@ $primary-color-4: #02726A;
 
 }
 
-body {
-  display: grid;
-  grid-template-columns: 60mm 145mm;
-  grid-template-rows: 30mm 100%;
-  grid-template-areas: 
-    "overview header"
-    "overview content";
+.title {
+  display: flex;
+  justify-content: center;
 }
 
 .overview {
-  background-color: $primary-color-1;
-  color: $primary-color-4;
-  grid-area: overview;
+  color: $primary-color-1;
   padding-left: 0.6em;
   padding-right: 0.6em;
   padding-top: 2em;
@@ -47,7 +41,7 @@ body {
     h1 {
       margin-bottom: 0.1em;
       margin-top: 0.25em;
-      border-bottom: solid 1px $primary-color-4;
+      border-bottom: solid 1px $primary-color-1;
       font-size: 1.2em;
     }
 
@@ -63,7 +57,7 @@ body {
   }
 
   a {
-    color: $primary-color-4;
+    color: $primary-color-1;
   }
 
   ul.rating {
@@ -96,19 +90,17 @@ body {
 
 }
 
-.description {
-  font-weight: bold;
-  padding-bottom: 1em;
-  color: $primary-color-4;
-  border-bottom: solid 1px $primary-color-4;
-  margin-bottom: 2em;
-}
-
 .content {
   background-color: white;
-  grid-area: content;
   padding-left: 1em;
+}
 
+.area {
+  border-left: $primary-color-0 2px solid;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 1em;
+  margin-top: 3em;
 }
 
 .timeline {
@@ -116,10 +108,13 @@ body {
   grid-template-columns: 6em auto;
 
   .times {
+    grid-column: 1 / 2;
   }
 }
 
-.details {
+.role {
+  grid-column: 2 / 3;
+  padding-left: 2em;
 
   h2 {
     margin: 0;
@@ -132,6 +127,22 @@ body {
 
 }
 
+.description {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column: 1/3;
+  color: black;
+  // border-bottom: $primary-color-0 2px solid;
+  
+  h3 {
+    margin: 0;
+    font-size: 1em;
+  }
+  .summary {
+    grid-column: 1 / 3;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -139,17 +150,18 @@ a {
 .header {
   background-color: $primary-color-4;
   color: white !important;
-  grid-area: header;
   padding-left: 1em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 
   h1 {
     margin-bottom: 0;
   }
 }
 
-section {
-  page-break-before: auto;
+.unit {
   page-break-inside: avoid;
+  page-break-after: auto;
 }
 
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
